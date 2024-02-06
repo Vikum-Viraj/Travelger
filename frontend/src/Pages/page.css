@@ -1,0 +1,82 @@
+:root {
+    --PrimaryColor:hsl(199,100%,33%);
+    --SecondaryColor:hsl(187,85%,43%);
+    --gradientColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+    --hoverGradient:linear-gradient(to right,hsl(187, 39%, 54%),hsl(199, 57%, 50%));
+    --whiteColor:hsl(0,0%,100%);
+    --blackColor:hsl(201,33%,16%);
+    --textColor:hsl(240,4%,36%);
+    --whiteColorDeam:hsl(0,0%,93%);
+    --greyText:rgb(190,190,190);
+    --inputColor:rgb(239,239,239);
+    --bodyColor:rgb(240,240,246);
+    --cardBG:rgb(225,225,235);
+  }
+  
+
+.tableContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondContainer {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.maindiv {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-left: 50rem;
+}
+
+.addplace {
+    margin-left: 6.2rem;
+}
+
+.container {
+    h2 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        gap: 0.4rem;
+        font-size: 17px;
+
+        textarea,
+        button,input {
+            outline: none;
+            border: 1px solid #777676;
+            padding: 0.6rem;
+            border-radius: 5px;
+        }
+        textarea{
+            padding-bottom: 2.2rem;
+        }
+        button{
+            cursor: pointer;
+            margin-top: 0.5rem;
+            background: var(--gradientColor);
+            color: aliceblue;
+            font-size: 17px;
+            border: none;
+        }
+        button:hover{
+            background: var(--hoverGradient);
+        }
+    }
+}

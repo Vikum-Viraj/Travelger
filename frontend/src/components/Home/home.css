@@ -1,0 +1,100 @@
+/*# sourceMappingURL=home.css.map */
+
+
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+}
+
+.home {
+
+    .vid {
+        height: 80vh;
+        width: 100%;
+        object-fit: fill;
+    }
+
+    .textDiv {
+        position: absolute;
+        top: 8.5rem;
+        margin-left: 1rem;
+        color: aliceblue;
+
+        .smallText {
+            font-size: 40px;
+        }
+
+        .homeTitle {
+            font-size: 50px
+        }
+
+        p {
+            color: aliceblue;
+        }
+
+        .home_button {
+            margin-top: 1rem;
+            padding: 0.8rem 2.2rem;
+            border: none;
+            border-radius: 5px;
+            background: none;
+            background: var(--gradientColor);
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        .para{
+            margin-top: 1.5rem;   
+        }
+
+        .home_button {
+            transition-duration: 0.5s;
+        }
+
+        .home_button:hover {}
+
+        .search {
+            margin-left: 480px;
+            border: none;
+            display: flex;
+            align-items: center;
+
+            justify-content: center;
+
+            .int {
+                padding: 0.8rem 5rem;
+                border: none;
+                background:transparent;
+                border-radius: 8px;
+                cursor: pointer;
+                outline: none;
+                border: 2px solid white;
+            }
+            ::placeholder {
+                color: rgb(255, 255, 255);
+                opacity: 0.6;
+              }
+           
+            .sicon {
+                padding: 0.5rem 1rem;
+                background-color: none;
+                border: 1px solid white;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left: 1rem;
+                opacity: 0.7;
+                /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+            }
+
+        }
+    }
+}

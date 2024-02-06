@@ -1,0 +1,49 @@
+:root {
+  --PrimaryColor:hsl(199,100%,33%);
+  --SecondaryColor:hsl(187,85%,43%);
+  --gradientColor:linear-gradient(to right,hsl(187,85%,43%),hsl(199,100%,33%));
+  --whiteColor:hsl(0,0%,100%);
+  --blackColor:hsl(201,33%,16%);
+  --textColor:hsl(240,4%,36%);
+  --whiteColorDeam:hsl(0,0%,93%);
+  --greyText:rgb(190,190,190);
+  --inputColor:rgb(239,239,239);
+  --bodyColor:rgb(240,240,246);
+  --cardBG:rgb(225,225,235);
+}
+
+.nav_container{
+    display: flex;
+    justify-content: space-around;
+    padding: 0.9rem;
+    
+    background-color: rgb(207, 230, 230);
+    color: #1f2e2e;
+
+    .login_btn{
+        background: var(--gradientColor);
+        border-radius: 0.6rem;
+        border: none;
+        padding: 0.6rem 1.8rem;
+        cursor: pointer;
+        color: aliceblue;
+    }
+
+    .menu{
+        align-items: baseline;
+    }
+  
+    .logo_container{
+        display: flex;
+        margin-right: 400px
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+            a{
+                color: #1f2e2e;
+            }
+    }
+}

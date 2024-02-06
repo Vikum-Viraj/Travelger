@@ -1,0 +1,26 @@
+/*# sourceMappingURL=main.css.map */
+
+.travelcard{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.price{
+    display: flex;
+    justify-content: baseline;
+    gap: 3.2rem;
+}
