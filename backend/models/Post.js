@@ -20,7 +20,7 @@ const postSchema = new Schema({
     },
     img:{
         type:String,
-        required:false,
+        required:false
     },
 })
 

@@ -66,5 +66,31 @@ export const loginUser = async(req,res) => {
 //update a user
 export const updateUser = async(req,res) => {
 
+    try{
+        const { name, email, password } = req.body
 
+        if(!name && !email && !password){
+            return res.status(422).json({message:"all fields are required"})
+        }
+
+        const user = await User.findById(req.user.id)
+        if(!user){
+            return res.status(422).json({message:"User not found"})
+        } 
+
+        const emailExits = await User.findOne({email})
+
+        if(emailExits && (emailExits._id != req.user.id)){
+            return res.status(422).json({message:"email already exits"})
+        }
+
+        const salt = await bcrypt.genSalt(10)
+        const hashPassword = await bcrypt.hash(password,salt)
+
+        const updatedUser = await User.findByIdAndUpdate(req.user.id,{name,email,password:hashPassword},{new:true})
+        return res.status(200).json(updatedUser)
+
+    }catch(err){
+        return res.status(422).json({message:"error updating user"})
+    }
 }

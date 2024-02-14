@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -9,7 +9,8 @@ import PlaceIcon from '@mui/icons-material/Place';
 import './main.css'
 import { IconButton } from '@mui/material';
 
-const TravelCard = ({id,tittle,image,description}) => {
+const TravelCard = ({id,tittle,image,location,price,description}) => {
+
     return (
         <div>
             <Card sx={{ maxWidth: 270 }} key={id} style={{borderRadius:'8px'}}>
@@ -25,7 +26,7 @@ const TravelCard = ({id,tittle,image,description}) => {
                     <div className='location'>
                     <PlaceIcon sx={{color:'#696969'}}/>
                     <Typography fontSize='body2' sx={{color:'#696969'}} >
-                        Galle
+                        {location}
                     </Typography>
                     </div>
                     <hr/>
@@ -34,7 +35,7 @@ const TravelCard = ({id,tittle,image,description}) => {
                             Rental Price
                         </Typography>
                         <Typography fontSize='body2'>
-                                $120
+                                Rs. {price}
                         </Typography>
                     </div>
                     <hr/>

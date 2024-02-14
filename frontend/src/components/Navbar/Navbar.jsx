@@ -3,11 +3,24 @@ import './navbar.css'
 import { MdTravelExplore } from "react-icons/md";
 import { IoIosCloseCircle } from "react-icons/io";
 import { TbGridDots } from "react-icons/tb";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IconButton } from '@mui/material';
+import { useContext } from 'react';
+import { UserContext } from '../context/userContext';
 
 const Navbar = () => {
+
+  const { currentUser, setCurrentUser } = useContext(UserContext)
+  const navigate = useNavigate()
+
+
+  const logOut = () => {
+    localStorage.removeItem('user');
+    setCurrentUser(null);
+    alert('Log out successfully');
+    navigate('/');
+  };
 
   return (
     <nav>
@@ -19,11 +32,12 @@ const Navbar = () => {
         <ul className='menu'>
           <li><a href='/'>Home</a></li>
           <li><a href='/about'>About</a></li>
-          <li><a href='/register'>Register</a></li>
-          <li><a href='/addplace'>Add place</a></li>
-          <li><a href='/dashboard'>Dashboard</a></li>
-          <a href='/explore'><button className='login_btn'>Login</button></a>
-          <a href='/cart'><IconButton sx={{color:'#808080'}}><ShoppingCartIcon/></IconButton></a>
+          {!currentUser ?<li><a href='/register'>Register</a></li>:""}
+          {currentUser ? <li><a href='/addplace'>Add place</a></li> : ""}
+          {currentUser ? <li><a href='/dashboard'>Dashboard</a></li> : ""}
+          <li>{currentUser ? <button className='login_btn' onClick={logOut}>Log Out</button> : null}</li>
+          <a href='/login'>{!currentUser ? <button className='login_btn'>Login</button> : null}</a>
+          <a href='/cart'><IconButton sx={{ color: '#808080' }}><ShoppingCartIcon /></IconButton></a>
         </ul>
       </div>
     </nav>

@@ -16,7 +16,7 @@ app.use("/user",userRoute)
 
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_URL)
-.then(() => app.listen(5000))
+.then(() => app.listen(5001))
 .then(() => console.log("Database is Connected"))
 .catch((err) => console.log(err));
 

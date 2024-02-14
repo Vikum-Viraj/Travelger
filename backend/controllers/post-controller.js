@@ -7,7 +7,7 @@ export const addPlace = async (req, res, next) => {
 
     try {
         const { place, location, description, price, img } = req.body
-        if (!place && !location && !description && !price && !img) {
+        if (!place && !location && !description && !price) {
             return res.status(422).json({message:"all fields are required"})
         }
         const dateCreated = moment(new Date()).format("YYYY-MM-DD hh:mm:ss");
