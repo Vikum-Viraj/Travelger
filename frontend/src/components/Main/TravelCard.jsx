@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -7,9 +7,9 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import PlaceIcon from '@mui/icons-material/Place';
 import './main.css'
-import { IconButton } from '@mui/material';
 
-const TravelCard = ({id,tittle,image,location,price,description}) => {
+const TravelCard = ({id,tittle,image,location,price,description,cartOnClick}) => {
+
 
     return (
         <div>
@@ -46,7 +46,10 @@ const TravelCard = ({id,tittle,image,location,price,description}) => {
                     </div>
                 </CardContent>
                 <CardActions sx={{marginLeft:'0.5rem'}}>
-                    <Button size="small"  sx={{ borderBlockColor: '#00e6e6',color:'#476b6b'}} variant='outlined'>Add to cart</Button>
+                    <Button size="small" 
+                     sx={{ borderBlockColor: '#00e6e6',color:'#476b6b'}}
+                     onClick={cartOnClick}
+                     variant='outlined'>Add to cart</Button>
                 </CardActions>
             </Card>
         </div>
