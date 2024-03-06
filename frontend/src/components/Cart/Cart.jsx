@@ -14,6 +14,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Cart = () => {
   
+  //get items from localstorage
   const cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
   return (
