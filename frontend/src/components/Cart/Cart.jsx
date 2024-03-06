@@ -13,6 +13,9 @@ import '../../Pages/page.css'
 import { Link, NavLink } from 'react-router-dom';
 
 const Cart = () => {
+  
+  const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
   return (
     <>
         <>

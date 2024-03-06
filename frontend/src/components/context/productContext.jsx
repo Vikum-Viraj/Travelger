@@ -22,7 +22,7 @@ export const CartContext = createContext()
 
   }
 
-
+  //remove items from the cart
   const removeFromCart = (item) => {
     const itemInCart = cartItems.find((items) => items.id == item.id)
 

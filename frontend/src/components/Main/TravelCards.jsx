@@ -8,6 +8,7 @@ import { CartContext } from '../context/productContext'
 
 const TravelCards = () => {
 
+    //set duration for transition
     useEffect(() => {
         Aos.init({ duration: 2000 })
     }, [])
